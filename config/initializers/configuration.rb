@@ -1,0 +1,1 @@
+Rails.configuration.bot_name = 'HipChatBot'
