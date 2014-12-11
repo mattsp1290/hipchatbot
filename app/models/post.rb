@@ -2,6 +2,6 @@ class Post < ActiveRecord::Base
 	include Chattable
 
 	def self.test
-		send('Test', 'Hello!')
+		Post.send('Test', 'Hello!')
 	end
 end
