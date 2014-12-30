@@ -1,9 +1,13 @@
 module Chattable
   extend ActiveSupport::Concern
   module ClassMethods
-    def send(room, message)
+    def send_message(room, message)
       hipchat = create_client
-      hipchat[room].send(ENV['bot_name'], 'Yay!', :message_format => 'text', :notify => true)
+      begin
+        hipchat[room].send(ENV['bot_name'], 'Yay!', :message_format => 'text', :notify => true)
+      rescue HipChat::UnknownRoom
+        puts 'Room: ' + room
+      end
     end
 
     def create_client
