@@ -1,0 +1,41 @@
+<%= form_for(@hip_chat_event) do |f| %>
+  <% if @hip_chat_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hip_chat_event.errors.count, "error") %> prohibited this hip_chat_event from being saved:</h2>
+
+      <ul>
+      <% @hip_chat_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :webhook_type %><br>
+    <%= f.text_field :webhook_type %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :mention_name %><br>
+    <%= f.text_field :mention_name %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br>
+    <%= f.number_field :room %>
+  </div>
+  <div class="field">
+    <%= f.label :webhook_id %><br>
+    <%= f.number_field :webhook_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

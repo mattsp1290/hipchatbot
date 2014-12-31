@@ -1,0 +1,35 @@
+<h1>Listing hip_chat_events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Date</th>
+      <th>Mention name</th>
+      <th>Message</th>
+      <th>Room</th>
+      <th>Webhook</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hip_chat_events.each do |hip_chat_event| %>
+      <tr>
+        <td><%= hip_chat_event.webhook_type %></td>
+        <td><%= hip_chat_event.date %></td>
+        <td><%= hip_chat_event.mention_name %></td>
+        <td><%= hip_chat_event.message %></td>
+        <td><%= hip_chat_event.room %></td>
+        <td><%= hip_chat_event.webhook_id %></td>
+        <td><%= link_to 'Show', hip_chat_event %></td>
+        <td><%= link_to 'Edit', edit_hip_chat_event_path(hip_chat_event) %></td>
+        <td><%= link_to 'Destroy', hip_chat_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hip chat event', new_hip_chat_event_path %>

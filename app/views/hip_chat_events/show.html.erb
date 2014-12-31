@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @hip_chat_event.webhook_type %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @hip_chat_event.date %>
+</p>
+
+<p>
+  <strong>Mention name:</strong>
+  <%= @hip_chat_event.mention_name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @hip_chat_event.message %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @hip_chat_event.room %>
+</p>
+
+<p>
+  <strong>Webhook:</strong>
+  <%= @hip_chat_event.webhook_id %>
+</p>
+
+<%= link_to 'Edit', edit_hip_chat_event_path(@hip_chat_event) %> |
+<%= link_to 'Back', hip_chat_events_path %>

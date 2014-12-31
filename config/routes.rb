@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  post 'hip_chat_events/receive' => 'hip_chat_events#receive'
+
+  resources :hip_chat_events
+
   resources :hooks
 
   # The priority is based upon order of creation: first created -> highest priority.

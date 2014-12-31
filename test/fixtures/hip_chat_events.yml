@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  date: 2014-12-30
+  mention_name: MyString
+  message: MyString
+  room: 1
+  webhook_id: 1
+
+two:
+  type: 
+  date: 2014-12-30
+  mention_name: MyString
+  message: MyString
+  room: 1
+  webhook_id: 1
