@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230215113) do
+ActiveRecord::Schema.define(version: 20150101192819) do
 
   create_table "hip_chat_events", force: true do |t|
     t.string   "webhook_type"
@@ -36,6 +36,22 @@ ActiveRecord::Schema.define(version: 20141230215113) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+  end
+
+  create_table "reddits", force: true do |t|
+    t.string   "room"
+    t.string   "subreddit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "replies", force: true do |t|
+    t.string   "room"
+    t.string   "mention_name"
+    t.text     "keywords"
+    t.text     "tags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

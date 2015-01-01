@@ -1,7 +1,6 @@
 class HipChatEventHelper
   def self.process_event(event)
-  	Rails.logger.info 'Process Event'
-    Rails.logger.info event
-    Rails.logger.info '------------'
+  	handled = false
+  	handled = ReplyHandler.process(event) unless handled
   end
 end

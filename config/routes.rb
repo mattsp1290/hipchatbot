@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :reddits
+
   post 'hip_chat_events/receive' => 'hip_chat_events#receive'
+  get 'replies/valid' => 'replies#valid'
 
   resources :hip_chat_events
-
+  resources :replies
   resources :hooks
 
   # The priority is based upon order of creation: first created -> highest priority.

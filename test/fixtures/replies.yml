@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: MyString
+  mention_name: MyString
+  keywords: MyText
+  tags: MyText
+
+two:
+  room: MyString
+  mention_name: MyString
+  keywords: MyText
+  tags: MyText

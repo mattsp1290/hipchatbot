@@ -10,7 +10,16 @@ class HipChatHelper
     	begin
     		hipchat[room].send(ENV['bot_name'], message, :message_format => 'text', :notify => true)
     	rescue HipChat::UnknownRoom
-    		puts 'Room #{room} is unkown'
+    		Rails.logger.error 'Room #{room} is unkown'
+    	rescue => e
+    		Rails.logger.error e
+    		raise e
     	end
+	end
+
+	def self.get_room_id(room)
+		hipchat = get_client
+		room = hipchat[room].get_room
+		room['id']
 	end
 end
