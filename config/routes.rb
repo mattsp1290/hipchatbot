@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reddit_posts
+
   resources :reddits
 
   post 'hip_chat_events/receive' => 'hip_chat_events#receive'
