@@ -1,4 +1,4 @@
-class Janitor
+class Janitor < Worker
   def self.work
   	records_cleaned = 0
   	models = [RedditPost, HipChatEvent]

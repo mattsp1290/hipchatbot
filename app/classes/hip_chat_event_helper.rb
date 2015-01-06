@@ -1,7 +1,9 @@
 class HipChatEventHelper
   def self.process_event(event)
+  	event_handlers = [MentionHandler, ReplyHandler]
   	handled = false
-  	handled = MentionHandler.process(event) unless handled
-  	handled = ReplyHandler.process(event) unless handled
+  	event_handlers.each do |handler|
+  		handled = handler.process(event) unless handled
+  	end
   end
 end

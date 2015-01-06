@@ -1,4 +1,4 @@
-class RedditWorker
+class RedditWorker < Worker
   def self.work
   	reddits = Reddit.all
   	posts = RedditPost.all

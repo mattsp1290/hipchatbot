@@ -41,6 +41,9 @@ gem 'httparty'
 # job scheduler
 gem 'whenever'
 
+# weather api
+gem 'weather-underground'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
