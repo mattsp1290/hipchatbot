@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @migration.number %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @migration.owner %>
+</p>
+
+<%= link_to 'Edit', edit_migration_path(@migration) %> |
+<%= link_to 'Back', migrations_path %>

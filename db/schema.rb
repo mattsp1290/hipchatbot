@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150101193613) do
+ActiveRecord::Schema.define(version: 20150108183622) do
 
   create_table "hip_chat_events", force: true do |t|
     t.string   "webhook_type"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20150101193613) do
     t.string   "room"
     t.string   "url"
     t.string   "event"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "migrations", force: true do |t|
+    t.string   "number"
+    t.string   "owner"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

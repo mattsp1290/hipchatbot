@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :migrations
+
   resources :reddit_posts
 
   resources :reddits
