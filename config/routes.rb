@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  root "hip_chat_events#index"
+
   resources :migrations
 
   resources :reddit_posts

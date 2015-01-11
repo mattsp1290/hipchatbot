@@ -1,5 +1,6 @@
 class HooksController < ApplicationController
   before_action :set_hook, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /hooks
   # GET /hooks.json

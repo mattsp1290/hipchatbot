@@ -1,5 +1,6 @@
 class RedditPostsController < ApplicationController
   before_action :set_reddit_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /reddit_posts
   # GET /reddit_posts.json

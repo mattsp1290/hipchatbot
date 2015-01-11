@@ -1,6 +1,7 @@
 class HipChatEventsController < ApplicationController
   require 'json'
   before_action :set_hip_chat_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:receive]
   protect_from_forgery with: :exception, :except => [:receive]
 
   def receive
