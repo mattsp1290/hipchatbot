@@ -1,0 +1,25 @@
+<%= form_for(@reddit) do |f| %>
+  <% if @reddit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reddit.errors.count, "error") %> prohibited this reddit from being saved:</h2>
+
+      <ul>
+      <% @reddit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :room %><br>
+    <%= f.text_field :room %>
+  </div>
+  <div class="field">
+    <%= f.label :subreddit %><br>
+    <%= f.text_field :subreddit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

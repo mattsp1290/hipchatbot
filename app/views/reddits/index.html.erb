@@ -1,0 +1,27 @@
+<h1>Listing reddits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Subreddit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reddits.each do |reddit| %>
+      <tr>
+        <td><%= reddit.room %></td>
+        <td><%= reddit.subreddit %></td>
+        <td><%= link_to 'Show', reddit %></td>
+        <td><%= link_to 'Edit', edit_reddit_path(reddit) %></td>
+        <td><%= link_to 'Destroy', reddit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reddit', new_reddit_path %>

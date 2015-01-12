@@ -1,0 +1,2 @@
+module RedditPostsHelper
+end

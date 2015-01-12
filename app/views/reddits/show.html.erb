@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @reddit.room %>
+</p>
+
+<p>
+  <strong>Subreddit:</strong>
+  <%= @reddit.subreddit %>
+</p>
+
+<%= link_to 'Edit', edit_reddit_path(@reddit) %> |
+<%= link_to 'Back', reddits_path %>
